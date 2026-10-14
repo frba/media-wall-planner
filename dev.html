@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Arch2D Elevation Architect — Media Wall Planner &amp; AI Render Studio</title>
+  <meta name="description" content="Draft true-to-scale 2D elevations of media walls, cabinetry and shelving, apply architectural textures, export 2000px+ reference PNGs and generate AI renders from structured prompts." />
+  <meta name="theme-color" content="#0b0d11" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="src/tokens.css" />
+  <link rel="stylesheet" href="src/ui.css" />
+  <link rel="stylesheet" href="src/studio.css" />
+</head>
+<body>
+  <div class="app" id="app">
+    <header class="app-header" id="app-header">
+      <div class="brand">
+        <button class="icon-btn only-mobile" id="btn-toggle-left" aria-label="Toggle setup panel">☰</button>
+        <div class="brand-mark" aria-hidden="true"></div>
+        <h1 class="brand-title">Arch2D <span>Elevation Architect</span></h1>
+        <span class="badge" id="badge-dirty" title="Autosaved to this browser">Autosaved</span>
+      </div>
+      <nav class="header-actions" aria-label="Project actions">
+        <div class="btn-group">
+          <button class="btn ghost" id="btn-undo" title="Undo (Ctrl/Cmd+Z)" aria-label="Undo">↶</button>
+          <button class="btn ghost" id="btn-redo" title="Redo (Ctrl/Cmd+Shift+Z)" aria-label="Redo">↷</button>
+        </div>
+        <label class="select-wrap" for="select-template">
+          <span class="sr-only">Templates</span>
+          <select id="select-template" class="select">
+            <option value="">Templates…</option>
+          </select>
+        </label>
+        <button class="btn" id="btn-save" title="Save project (Ctrl/Cmd+S)">💾 <span class="hide-sm">Save</span></button>
+        <button class="btn" id="btn-load" title="Load project">📂 <span class="hide-sm">Load</span></button>
+        <input type="file" id="input-load" accept=".json,.arch2d.json,application/json" hidden />
+        <button class="btn" id="btn-export" title="Export 2000px+ reference PNG">📷 <span class="hide-sm">Export PNG</span></button>
+        <button class="btn primary" id="btn-studio" title="AI Render &amp; Prompt Studio">✨ <span class="hide-sm">AI Render Studio</span></button>
+      </nav>
+    </header>
+
+    <aside class="sidebar sidebar-left" id="sidebar-left" aria-label="Wall and setup"></aside>
+
+    <main class="stage" id="stage">
+      <div class="stage-toolbar" id="stage-toolbar"></div>
+      <div class="canvas-host" id="canvas-host"></div>
+      <div class="stage-hint" id="stage-hint"></div>
+    </main>
+
+    <aside class="sidebar sidebar-right" id="sidebar-right" aria-label="Element inspector"></aside>
+  </div>
+
+  <div class="toast-stack" id="toast-stack" aria-live="polite"></div>
+
+  <!-- Load order is part of the contract (CONTRACTS.md). build.sh inlines these. -->
+  <script src="src/00-namespace.js"></script>
+  <script src="src/01-bus.js"></script>
+  <script src="src/02-vocab.js"></script>
+  <script src="src/state.js"></script>
+  <script src="src/persistence.js"></script>
+  <script src="src/textures.js"></script>
+  <script src="src/render.js"></script>
+  <script src="src/export.js"></script>
+  <script src="src/canvas.js"></script>
+  <script src="src/input.js"></script>
+  <script src="src/templates.js"></script>
+  <script src="src/prompt.js"></script>
+  <script src="src/providers.js"></script>
+  <script src="src/studio.js"></script>
+  <script src="src/ui.js"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+/* Arch2D — design tokens (Phase 0). */
+:root {
+  /* Surfaces */
+  --bg-0: #0b0d11;
+  --bg-1: #12151b;
+  --bg-2: #181c24;
+  --bg-3: #20252f;
+  --glass: rgba(22, 26, 34, 0.72);
+  --glass-strong: rgba(18, 21, 28, 0.9);
+  --line: rgba(255, 255, 255, 0.07);
+  --line-strong: rgba(255, 255, 255, 0.14);
+
+  /* Text */
+  --text-0: #f3f1ec;
+  --text-1: #c4c7ce;
+  --text-2: #8a909c;
+  --text-3: #5d636f;
+
+  /* Accents */
+  --brass: hsl(36, 58%, 62%);
+  --brass-strong: hsl(34, 70%, 55%);
+  --brass-soft: hsla(36, 58%, 62%, 0.14);
+  --cyan: hsl(190, 85%, 60%);
+  --cyan-soft: hsla(190, 85%, 60%, 0.16);
+  --danger: hsl(4, 72%, 62%);
+  --danger-soft: hsla(4, 72%, 62%, 0.14);
+  --success: hsl(150, 50%, 55%);
+
+  --grad-brand: linear-gradient(135deg, hsl(36, 70%, 64%) 0%, hsl(20, 65%, 56%) 100%);
+  --grad-panel: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
+
+  /* Type */
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --fs-xs: 11px;
+  --fs-sm: 12px;
+  --fs-md: 13px;
+  --fs-lg: 15px;
+  --fs-xl: 18px;
+
+  /* Spacing & shape */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 14px;
+  --r-xl: 20px;
+
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.25);
+  --shadow-2: 0 10px 40px rgba(0, 0, 0, 0.45);
+  --ring: 0 0 0 2px hsla(36, 58%, 62%, 0.45);
+
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --t-fast: 120ms;
+  --t-med: 220ms;
+
+  --header-h: 56px;
+  --sidebar-w: 280px;
+  --inspector-w: 300px;
+}
