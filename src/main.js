@@ -14,8 +14,9 @@
     // 3. Initialize global keyboard shortcuts
     A.input.init();
 
-    // 4. Initialize AI Studio modal
+    // 4. Initialize AI Studio modal & House Item Library modal
     A.studio.init();
+    A.library.init();
 
     // 5. Check autosave state vs default template (project.md §5.2)
     let restored = false;

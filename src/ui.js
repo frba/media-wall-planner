@@ -295,6 +295,20 @@
     );
     secPresets.appendChild(btnCustom);
 
+    // House Items Library & Prompt button
+    const btnLibrary = U.h(
+      'button',
+      {
+        id: 'btn-open-library',
+        class: 'btn primary',
+        style: { width: '100%', justifyContent: 'center', marginTop: '8px', gap: '8px' },
+        onclick: () => A.library.open(),
+      },
+      U.h('span', null, '🛋️'),
+      U.h('span', null, 'Browse House Library & Prompt…')
+    );
+    secPresets.appendChild(btnLibrary);
+
     // 5. Ergonomics & Seated Eye Level
     const secErgo = U.h('div', { class: 'sidebar-section' });
     secErgo.appendChild(U.h('div', { class: 'section-heading' }, 'Spectator Eye Level'));

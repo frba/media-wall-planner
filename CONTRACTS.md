@@ -5,7 +5,7 @@ Modules talk to each other **only** through the APIs listed here and through bus
 Never write the literal closing script tag sequence inside any JS file, because `build.sh` inlines the files.
 
 ## Load order (dev.html and build.sh use the same order)
-`00-namespace` → `01-bus` → `02-vocab` → `state` → `persistence` → `textures` → `render` → `export` → `canvas` → `input` → `templates` → `prompt` → `providers` → `studio` → `ui` → `main`
+`00-namespace` → `01-bus` → `02-vocab` → `state` → `persistence` → `textures` → `render` → `export` → `canvas` → `input` → `templates` → `prompt` → `providers` → `studio` → `library` → `ui` → `main`
 
 ## Units & coordinates
 - Model units are **centimetres**. The origin is the bottom-left of the wall at floor level. +Y points up (AFF = Above Finished Floor).
@@ -101,6 +101,9 @@ Errors are thrown as `A.providers.ProviderError { code:'auth'|'cors'|'rate'|'blo
 
 ## A.studio
 `init()`, `open()`, `close()`
+
+## A.library
+`init()`, `open(defaultTab='browse')`, `close()`, `getCatalog()→Item[]`, `addItemToModel(item)→id`
 
 ## A.ui
 `init()`, `toast(msg, type='info'|'success'|'error')`, `confirm({ title, message, okLabel, cancelLabel })→Promise<bool>`

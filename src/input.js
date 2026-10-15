@@ -62,6 +62,13 @@
       return;
     }
 
+    // 5c. House Item Library & Prompt: 'l' or 'L' without modifier
+    if (!cmdOrCtrl && (key === 'l' || key === 'L')) {
+      e.preventDefault();
+      A.library.open();
+      return;
+    }
+
     // 6. Delete / Backspace
     if (key === 'Delete' || key === 'Backspace') {
       const sel = A.store.getSelection();
